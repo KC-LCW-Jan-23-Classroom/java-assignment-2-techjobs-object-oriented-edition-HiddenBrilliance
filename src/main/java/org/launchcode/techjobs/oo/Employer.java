@@ -9,8 +9,8 @@ public class Employer {
     private String value;
 
     public Employer() {
-        id = nextId;
-        nextId++;
+        this.id = nextId; //id starts at 1
+        nextId++; // iterates
     }
 
     public Employer(String value) {
