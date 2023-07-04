@@ -2,9 +2,13 @@ package org.launchcode.techjobs.oo.test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
-import org.junit.Assert.*;
+
 
 /**
  * Created by LaunchCode
@@ -16,21 +20,19 @@ public class JobTest {
     Job testJob1 = new Job();
     Job testJob2 = new Job();
 
-    assertNotEquals(testJob1.equals(testJob2));
+    assertNotEquals(testJob1, testJob2);
 }
-    private void assertNotEquals(boolean b) {
 
-    }
 
     @Test
     public void testJobConstructorSetsAllFields() {
 
     Job testingAllFields = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-    assertEquals(testingAllFields.getName() instanceof String);
-    assertEquals(testingAllFields.getEmployer() instanceof Employer);
-    assertEquals(testingAllFields.getLocation() instanceof Location);
-    assertEquals(testingAllFields.getPositionType() instanceof PositionType);
-    assertEquals(testingAllFields.getCoreCompetency() instanceof CoreCompetency);
+    assertEquals("Product tester", testingAllFields.getName());
+    assertEquals(new Employer("ACME"), testingAllFields.getEmployer());
+    assertEquals(new Location("Desert"), testingAllFields.getLocation());
+    assertEquals(new PositionType("Quality control"), testingAllFields.getPositionType());
+    assertEquals(new CoreCompetency("Persistence"), testingAllFields.getCoreCompetency());
 
 
     assertTrue(testingAllFields.getName() instanceof String);
@@ -41,13 +43,6 @@ public class JobTest {
 
 
 }
-    private void assertEquals(boolean b) {
-
-    }
-
-    private void assertTrue(boolean b) {
-
-    }
 
     @Test
     public void testJobsForEquality(){
@@ -58,10 +53,6 @@ public class JobTest {
 
     assertFalse(job1.equals(job2));
     }
-    private void assertFalse(boolean b){
-
-    }
-
 
 
 }
