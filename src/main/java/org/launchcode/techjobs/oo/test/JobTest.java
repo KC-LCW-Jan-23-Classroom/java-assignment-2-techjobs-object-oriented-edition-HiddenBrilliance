@@ -44,6 +44,7 @@ public class JobTest {
 
     }
 
+
     @Test
     public void testJobsForEquality() {
         Job job1 = new Job("Chuck", new Employer("Apple"), new Location("Kansas City"), new PositionType("Manager"), new CoreCompetency("Tech Sales"));
@@ -53,7 +54,7 @@ public class JobTest {
     }
 
     @Test
-    public void testToString(){
+    public void testToStringStartsAndEndsWithNewLine(){
         Job testJob = new Job("Janice", new Employer("NASA"), new Location("New York"), new PositionType("Web Dev"), new CoreCompetency("Java"));
         assertEquals("Name: Janice" + "\n", testJob.getName().toString());
         assertEquals(new Employer("Employer: NASA" + "\n"), testJob.getEmployer().toString());
