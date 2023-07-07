@@ -15,10 +15,11 @@ public class Job {
 
     public Job(){
         this.id = nextId;
+        nextId++;
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency){
-       Job jobInformation = new Job();
+       this();
        this.name = name;
        this.employer = employer;
        this.location = location;
@@ -26,6 +27,10 @@ public class Job {
        this.coreCompetency = coreCompetency;
     }
 
+    public void setId(){
+        this.id = nextId;
+        nextId++;
+    }
     public int getId() {
         return id;
     }
@@ -70,13 +75,21 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Job)) return false;
+        Job that = (Job) o;
+        return id == that.id;
+    }
+
 //    @Override
-public boolean equals(Object o) {
-    if (this == o) return true;
-    if (!(o instanceof Job)) return false;
-    Job that = (Job) o;
-    return id == that.id;
-}
+//    public String toString(Job job) {
+//        if () // needs a boolean to reflect the existence of a Job object
+//            else{
+//                System.out.println("Data not available");
+//        }
+//    }
 
     @Override
     public int hashCode() {
