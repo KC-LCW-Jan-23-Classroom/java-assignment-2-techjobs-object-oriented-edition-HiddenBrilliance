@@ -53,6 +53,8 @@ public class JobTest {
         assertFalse(job1.equals(job2));
     }
 
+
+    // only test that is showing is the one for Name: Janice
     @Test
     public void testToStringStartsAndEndsWithNewLine(){
         Job testJob = new Job("Janice", new Employer("NASA"), new Location("New York"), new PositionType("Web Dev"), new CoreCompetency("Java"));
