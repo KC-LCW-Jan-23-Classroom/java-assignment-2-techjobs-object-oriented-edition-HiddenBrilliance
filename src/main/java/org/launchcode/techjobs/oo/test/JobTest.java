@@ -59,10 +59,10 @@ public class JobTest {
     public void testToStringStartsAndEndsWithNewLine(){
         Job testJob = new Job("Janice", new Employer("NASA"), new Location("New York"), new PositionType("Web Dev"), new CoreCompetency("Java"));
         assertEquals("Name: Janice" + "\n", testJob.getName().toString());
-        assertEquals(new Employer("Employer: NASA" + "\n"), testJob.getEmployer().toString());
-        assertEquals(new Location("Location: New York" + "\n"), testJob.getLocation().toString());
-        assertEquals(new PositionType("Position Type: Web Dev" + "\n"), testJob.getPositionType().toString());
-        assertEquals(new CoreCompetency("Core Competency: Java" + "\n"), testJob.getCoreCompetency().toString());
+        assertEquals(new Employer().getValue(), testJob.getEmployer().toString());
+        assertEquals(new Location().getValue(), testJob.getLocation().toString());
+        assertEquals(new PositionType().getValue(), testJob.getPositionType().toString());
+        assertEquals(new CoreCompetency().getValue(), testJob.getCoreCompetency().toString());
 
     }
 }
