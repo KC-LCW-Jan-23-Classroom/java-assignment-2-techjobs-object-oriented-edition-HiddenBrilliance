@@ -89,16 +89,22 @@ public class Job {
 //    @Override
     public String toString(Job job) {
 
+        this.name = getName();
+        this.employer = getEmployer();
+        this.location = getLocation();
+        this.positionType = getPositionType();
+        this.coreCompetency = getCoreCompetency();
+
 
         ArrayList<HashMap> allJobFields = new ArrayList<>(); // create ArrayList for HashMap
         HashMap<String, String> jobFields = new HashMap<>(); // create HashMap
 
         jobFields.put("ID: ", String.valueOf(job.getId())); // items put into HashMap by String Key, Value Pairs
-        jobFields.put("Name: ", job.getName());
-        jobFields.put("Employer: ", job.getEmployer().getValue());
-        jobFields.put("Location : ", job.getLocation().getValue());
-        jobFields.put("Position Type : ", job.getPositionType().getValue());
-        jobFields.put("Core Competency: ", job.getCoreCompetency().getValue());
+        jobFields.put("Name: ", name);
+        jobFields.put("Employer: ", employer.getValue());
+        jobFields.put("Location : ", location.getValue());
+        jobFields.put("Position Type : ", positionType.getValue());
+        jobFields.put("Core Competency: ", coreCompetency.getValue());
 
         allJobFields.add(jobFields); // adds HashMap to ArrayList
 
