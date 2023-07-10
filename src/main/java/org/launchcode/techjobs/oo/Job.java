@@ -103,12 +103,14 @@ public class Job {
         allJobFields.add(jobFields); // adds HashMap to ArrayList
 
         String value = "";
+
         for (Map<String, String> aJobField : allJobFields // for Each single Jobfield in ArrayList allJobFields
         ) {
             Set<Map.Entry<String, String>> entries = aJobField.entrySet();
             for (Map.Entry<String, String> entry : entries
             ) {
-                value += entry.getKey() + entry.getValue();
+                value += (entry.getKey() + entry.getValue());
+
 
             }
 
