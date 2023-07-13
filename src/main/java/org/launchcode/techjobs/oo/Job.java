@@ -127,62 +127,6 @@ public class Job {
 
 
 
-//        if (jobFields == null) {
-//
-//
-//            return "No job"; //change
-//        } else  {
-//
-//            jobFields.add(String.valueOf(job.getId()));
-//            jobFields.add(job.getName());
-//            jobFields.add(job.getEmployer().getValue());
-//            jobFields.add(job.getLocation().getValue());
-//            jobFields.add(job.getPositionType().getValue());
-//            jobFields.add(job.getCoreCompetency().getValue());
-//            jobFields.add( "/n" + job.getCoreCompetency().getValue() + "/n");
-//            String result = "";
-//             for (String jobField: jobFields
-//                 ) {
-//              result =  result + "/n" + jobField + "/n";
-//            }
-//return result;
-
-
-
-
-
-//        jobFields.put("ID", String.valueOf(testJob.getId()));
-//        jobFields.put("Name", testJob.getName());
-//        jobFields.put("Employer", testJob.getEmployer().getValue());
-//        jobFields.put("Location", testJob.getLocation().getValue());
-//        jobFields.put("Position Type", testJob.getPositionType().getValue());
-//        jobFields.put("Core Competency", testJob.getCoreCompetency().getValue());
-
-
-
-
-//        ArrayList<HashMap> allJobFields = new ArrayList<>(); // once HashMap made print each entry using forEach
-//        allJobFields.add(jobFields);
-//
-//// forEach(Map<String, String> jobField : allJobFields) {System.out.println}
-
-
-
-
-
-
-
-
-
-
-
-
-//                "ID: " + "/n" + testJob.getId() + "/n";
-//                "Name: " + "/n" + testJob.getName() + "/n";
-//                "Employer: " + "/n" + employer +
-//                "Location: " + location +
-//                "Position Type: " + positionType +
-//                "Core Competency: " + coreCompetency +
 
 
 

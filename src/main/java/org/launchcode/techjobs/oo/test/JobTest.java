@@ -65,7 +65,7 @@ public class JobTest {
         Job testJob1 = new Job("Janice", new Employer("NASA"), new Location("New York"), new PositionType("Web Dev"), new CoreCompetency("Java"));
         String stringTestJob1 = testJob1.toString();
         Character firstChar = stringTestJob1.charAt(0);
-        Character lastChar = stringTestJob1.charAt(-1);
+        Character lastChar = stringTestJob1.toString().charAt(stringTestJob1.length() - 1);
 
         Assert.assertEquals("/n", firstChar);
         Assert.assertEquals("/n", lastChar);
