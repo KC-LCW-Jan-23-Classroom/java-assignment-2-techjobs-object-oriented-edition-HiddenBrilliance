@@ -86,7 +86,7 @@ public class Job {
     }
 
 
-//    @Override
+    //    @Override
     public String toString(Job job) {
 
         this.name = getName();
@@ -95,39 +95,30 @@ public class Job {
         this.positionType = getPositionType();
         this.coreCompetency = getCoreCompetency();
 
+// string with newline in front of label
+        String[] jobFieldLabelsAndNewLine = {"/n" + "ID: ", "/n" + "Name: " , "/n" + "Employer: " , "/n" + "Location: ",  "/n" + "Position Type: ", "/n"+ "Core Competency: " };
+// new line behind value
+        String[] jobFieldsValuesAndNewLine = {job.getId() + "/n", job.getName() + "/n", job.employer.getValue() + "/n", job.getLocation().getValue() + "/n", job.getPositionType().getValue() + "/n", job.getCoreCompetency().getValue() + "/n"};
 
-        ArrayList<HashMap> allJobFields = new ArrayList<>(); // create ArrayList for HashMap
-        HashMap<String, String> jobFields = new HashMap<>(); // create HashMap
+        String fieldLabelsAndValues = "";
 
-        jobFields.put("ID: ", String.valueOf(job.getId())); // items put into HashMap by String Key, Value Pairs
-        jobFields.put("Name: ", name);
-        jobFields.put("Employer: ", employer.getValue());
-        jobFields.put("Location : ", location.getValue());
-        jobFields.put("Position Type : ", positionType.getValue());
-        jobFields.put("Core Competency: ", coreCompetency.getValue());
+        // interates through length of jobfields as it is equal to values
+        for (int i = 0; i < jobFieldsValuesAndNewLine.length; i++) {
 
-        allJobFields.add(jobFields); // adds HashMap to ArrayList
+            // declare the string values for jobfield/value iteration
+            String jobFieldLabelsAndNewLines = jobFieldLabelsAndNewLine[i];
+            String jobFieldValuesAndNewLines = jobFieldsValuesAndNewLine[i];
 
-        String value = "";
-
-        for (Map<String, String> aJobField : allJobFields // for Each single Jobfield in ArrayList allJobFields
-        ) {
-            Set<Map.Entry<String, String>> entries = aJobField.entrySet();
-            for (Map.Entry<String, String> entry : entries
-            ) {
-                value += (entry.getKey() + entry.getValue());
-
-
-            }
-
+            // expecting one large string with newlines in front and back
+            fieldLabelsAndValues += jobFieldLabelsAndNewLines + jobFieldValuesAndNewLines;
 
         }
-        return value;
+
+
+
+
+return fieldLabelsAndValues;
     }
-
-
-
-
 
 
 
