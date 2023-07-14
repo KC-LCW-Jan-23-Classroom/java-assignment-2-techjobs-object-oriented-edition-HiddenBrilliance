@@ -88,36 +88,34 @@ public class Job {
 
     //    @Override
     public String toString(Job job) {
-
         this.name = getName();
         this.employer = getEmployer();
         this.location = getLocation();
         this.positionType = getPositionType();
         this.coreCompetency = getCoreCompetency();
 
-// string with newline in front of label
-        String[] jobFieldLabelsAndNewLine = {"/n" + "ID: ", "/n" + "Name: " , "/n" + "Employer: " , "/n" + "Location: ",  "/n" + "Position Type: ", "/n"+ "Core Competency: " };
-// new line behind value
-        String[] jobFieldsValuesAndNewLine = {job.getId() + "/n", job.getName() + "/n", job.employer.getValue() + "/n", job.getLocation().getValue() + "/n", job.getPositionType().getValue() + "/n", job.getCoreCompetency().getValue() + "/n"};
+        String[] jobFieldLabels = {"ID:  ", "Name: ", "Employer: ", "Location: ", "Position Type: ", "Core Competency: "};
+        String[] jobFields = {String.valueOf(job.getId()), job.getName(), job.getEmployer().getValue(), job.getLocation().getValue(), job.getPositionType().getValue(), job.getCoreCompetency().getValue()};
 
-        String fieldLabelsAndValues = "";
 
-        // interates through length of jobfields as it is equal to values
-        for (int i = 0; i < jobFieldsValuesAndNewLine.length; i++) {
+        String jobDisplayWithNewLines = ""; // says Job displayWithNewLines out of scope how to get it into scope
+        for (int i = 0; i < jobFieldLabels.length; i++) {
+            String jobInfoDisplay = "";
+            String newLineBeginning = "/n";
+            String newLineEnd = "/n";
+//            jobInfoDisplay = jobInfoDisplay + (jobFieldLabels[i].concat(jobFields[i])); // why is
+//            jobDisplayWithNewLines = newLineBeginning + jobInfoDisplay + newLineEnd;
 
-            // declare the string values for jobfield/value iteration
-            String jobFieldLabelsAndNewLines = jobFieldLabelsAndNewLine[i];
-            String jobFieldValuesAndNewLines = jobFieldsValuesAndNewLine[i];
+            //foreach ( field in jobFields
+            //{ index of  JobFieldLabels + index of Job fields
+            // //into newArray}
 
-            // expecting one large string with newlines in front and back
-            fieldLabelsAndValues += jobFieldLabelsAndNewLines + jobFieldValuesAndNewLines;
 
         }
 
+        return null; //Array.Split(","); should be one big string
 
 
-
-return fieldLabelsAndValues;
     }
 
 
