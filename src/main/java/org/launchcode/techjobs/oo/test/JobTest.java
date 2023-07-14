@@ -75,8 +75,8 @@ public class JobTest {
         Character firstChar = stringTestJob1.charAt(0);
         Character lastChar = stringTestJob1.charAt(stringTestJob1.length() - 1);
 
-        Assert.assertEquals("/n", firstChar);
-        Assert.assertEquals("/n", lastChar);
+        Assert.assertEquals("/n", Character.toString(firstChar));
+        Assert.assertEquals("/n", Character.toString(lastChar));
 
 
     }
