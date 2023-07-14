@@ -33,11 +33,13 @@ public class JobTest {
     public void testJobConstructorSetsAllFields() {
 
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
         Assert.assertEquals("Product tester", testJob.getName());
-        Assert.assertEquals(new Employer("ACME"), testJob.getEmployer());
-        Assert.assertEquals(new Location("Desert"), testJob.getLocation());
-        Assert.assertEquals(new PositionType("Quality control"), testJob.getPositionType());
-        Assert.assertEquals(new CoreCompetency("Persistence"), testJob.getCoreCompetency());
+        Assert.assertEquals(new Employer("ACME").getValue(), testJob.getEmployer().getValue());
+        Assert.assertEquals(new Location("Desert").getValue(), testJob.getLocation().getValue());
+        Assert.assertEquals(new PositionType("Quality control").getValue(), testJob.getPositionType().getValue());
+        Assert.assertEquals(new CoreCompetency("Persistence").getValue(), testJob.getCoreCompetency().getValue());
+
 
 
         Assert.assertTrue(testJob instanceof Job); // null check per recommendation from intelliJ
@@ -45,6 +47,12 @@ public class JobTest {
         Assert.assertTrue(testJob.getLocation() instanceof Location);
         Assert.assertTrue(testJob.getPositionType() instanceof PositionType);
         Assert.assertTrue(testJob.getCoreCompetency() instanceof CoreCompetency);
+
+
+
+
+
+
     }
 
 
