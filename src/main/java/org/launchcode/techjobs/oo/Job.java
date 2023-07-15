@@ -87,7 +87,8 @@ public class Job {
 
 
     //    @Override
-    public String toString(Job job) {
+   @Override
+    public String toString() {
         this.name = getName();
         this.employer = getEmployer();
         this.location = getLocation();
@@ -95,25 +96,25 @@ public class Job {
         this.coreCompetency = getCoreCompetency();
 
         String[] jobFieldLabels = {"ID:  ", "Name: ", "Employer: ", "Location: ", "Position Type: ", "Core Competency: "};
-        String[] jobFields = {String.valueOf(job.getId()), job.getName(), job.getEmployer().getValue(), job.getLocation().getValue(), job.getPositionType().getValue(), job.getCoreCompetency().getValue()};
+        String[] jobFields = {String.valueOf(this.getId()), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue()};
 
+        StringBuffer stringOutput = new StringBuffer();
 
         String jobDisplayWithNewLines = ""; // says Job displayWithNewLines out of scope how to get it into scope
         for (int i = 0; i < jobFieldLabels.length; i++) {
-            String jobInfoDisplay = "";
-            String newLineBeginning = "/n";
-            String newLineEnd = "/n";
-//            jobInfoDisplay = jobInfoDisplay + (jobFieldLabels[i].concat(jobFields[i])); // why is
-//            jobDisplayWithNewLines = newLineBeginning + jobInfoDisplay + newLineEnd;
+            String newLineBeginning = "\n";
+            String newLineEnd = "\n";
 
-            //foreach ( field in jobFields
-            //{ index of  JobFieldLabels + index of Job fields
-            // //into newArray}
+            stringOutput.append(newLineBeginning);
+            stringOutput.append(jobFieldLabels[i]);
+            stringOutput.append(jobFieldLabels[i]);
+            stringOutput.append(newLineEnd);
+
 
 
         }
 
-        return null; //Array.Split(","); should be one big string
+        return stringOutput.toString(); //Array.Split(","); should be one big string
 
 
     }
