@@ -96,20 +96,23 @@ public class Job {
         this.coreCompetency = getCoreCompetency();
 
         String[] jobFieldLabels = {"ID:  ", "Name: ", "Employer: ", "Location: ", "Position Type: ", "Core Competency: "};
-        String[] jobFields = {String.valueOf(this.getId()), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue()};
+        String[] jobFieldsValues = {String.valueOf(this.getId()), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue()};
 
         StringBuffer stringOutput = new StringBuffer();
 
         String jobDisplayWithNewLines = ""; // says Job displayWithNewLines out of scope how to get it into scope
        for (int i = 0; i < jobFieldLabels.length; i++) {
+
             String newLineBeginning = "\n";
             String newLineEnd = "\n";
 
             stringOutput.append(newLineBeginning);
             stringOutput.append(jobFieldLabels[i]);
-            stringOutput.append(jobFieldLabels[i]);
+            stringOutput.append(jobFieldsValues[i]);
             stringOutput.append(newLineEnd);
-
+    if (jobFieldsValues[i] == null) {
+    System.out.println("Data not available");
+}
 
 
         }

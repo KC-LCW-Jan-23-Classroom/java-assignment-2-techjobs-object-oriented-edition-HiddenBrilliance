@@ -92,8 +92,18 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringHandlesEmptyField(){
+        public void testToStringHandlesEmptyField(){
+            Job emptyJobTest = new Job("", new Employer(""), new Location(""), new PositionType(""),
+                    new CoreCompetency(""));
 
+            String expectedValue = "\n" + "ID: " + String.valueOf(emptyJobTest.getId()) +"\n" +
+                    "Name: Data not available" +"\n" +
+                    "Employer: Data not available" + "\n" +
+                    "Location: Data not available" + "\n" +
+                    "Position Type: Data not available" +  "\n" +
+                    "Core Competency: Data not available" +  "\n";
+
+            Assert.assertEquals(expectedValue, expectedValue.toString());
     }
 }
 
