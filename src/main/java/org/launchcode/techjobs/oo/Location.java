@@ -13,18 +13,10 @@ public class Location {
         nextId++;
     }
 
-    public Location(String str){
-        str = this.getValue();
-        Location idField = new Location(); //calls new constructor called IdField
+    public Location(String value){
+        this();
+        this.value = value;
     }
-
-
-//    public string hashCode() {
-//        return Objects.hash(getId());
-//    }
-
-
-    // Custom toString, equals, and hashCode methods:
 
     @Override
     public String toString() {

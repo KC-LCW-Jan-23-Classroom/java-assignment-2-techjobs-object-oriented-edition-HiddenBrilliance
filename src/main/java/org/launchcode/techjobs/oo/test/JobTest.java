@@ -41,7 +41,6 @@ public class JobTest {
         Assert.assertEquals(new CoreCompetency("Persistence").getValue(), testJob.getCoreCompetency().getValue());
 
 
-
         Assert.assertTrue(testJob instanceof Job); // null check per recommendation from intelliJ
         Assert.assertTrue(testJob.getEmployer() instanceof Employer);
         Assert.assertTrue(testJob.getLocation() instanceof Location);
@@ -49,13 +48,7 @@ public class JobTest {
         Assert.assertTrue(testJob.getCoreCompetency() instanceof CoreCompetency);
 
 
-
-
-
-
     }
-
-
 
 
     @Test
@@ -69,7 +62,7 @@ public class JobTest {
 
     // only test that is showing is the one for Name: Janice
     @Test
-    public void testToStringStartsAndEndsWithNewLine(){
+    public void testToStringStartsAndEndsWithNewLine() {
         Job testJob1 = new Job("Janice", new Employer("NASA"), new Location("New York"), new PositionType("Web Dev"), new CoreCompetency("Java"));
 
         String stringTestJob1 = testJob1.toString();
@@ -83,9 +76,24 @@ public class JobTest {
     }
 
     @Test
-    public void testToStringContainsCorrectLabelsAndData(){
+    public void testToStringContainsCorrectLabelsAndData() {
+
+
+        Job testJob2 = new Job("Eric", new Employer("BitWig"), new Location("France"), new PositionType("Tech Support"), new CoreCompetency("Hardware"));
+        String[] jobFieldLabels = {"ID:  ", " Name: ", " Employer: ", " Location: ", " Position Type: ", " Core Competency: "};
+        String jobFieldLabelsString = String.join(",", jobFieldLabels);
+        String[] jobFields = {String.valueOf(testJob2.getId()) , testJob2.getName() , testJob2.getEmployer().getValue() , testJob2.getLocation().getValue() , testJob2.getPositionType().getValue() , testJob2.getCoreCompetency().getValue()};
+        String jobFieldValuesString = String.join(",", jobFields);
+        Assert.assertEquals("ID:  , Name: , Employer: , Location: , Position Type: , Core Competency: ", jobFieldLabelsString);
+        Assert.assertEquals("1,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString);
+
+
 
     }
 
+    @Test
+    public void testToStringHandlesEmptyField(){
+
+    }
 }
 
