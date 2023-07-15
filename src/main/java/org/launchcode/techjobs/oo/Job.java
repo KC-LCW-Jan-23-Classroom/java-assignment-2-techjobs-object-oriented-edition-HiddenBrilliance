@@ -101,7 +101,7 @@ public class Job {
         StringBuffer stringOutput = new StringBuffer();
 
         String jobDisplayWithNewLines = ""; // says Job displayWithNewLines out of scope how to get it into scope
-        for (int i = 0; i < jobFieldLabels.length; i++) {
+       for (int i = 0; i < jobFieldLabels.length; i++) {
             String newLineBeginning = "\n";
             String newLineEnd = "\n";
 
