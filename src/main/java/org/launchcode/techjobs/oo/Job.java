@@ -110,8 +110,9 @@ public class Job {
             stringOutput.append(jobFieldLabels[i]);
             stringOutput.append(jobFieldsValues[i]);
             stringOutput.append(newLineEnd);
-    if (jobFieldsValues[i] == null) {
-    System.out.println("Data not available");
+
+            if (jobFieldsValues[i] == "") {
+            System.out.println(jobFieldLabels[i] + "Data not available");
 }
 
 
