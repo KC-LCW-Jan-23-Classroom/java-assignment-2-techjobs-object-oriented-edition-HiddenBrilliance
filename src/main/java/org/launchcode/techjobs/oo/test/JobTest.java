@@ -96,7 +96,7 @@ public class JobTest {
             Job emptyJobTest = new Job("", new Employer(""), new Location(""), new PositionType(""),
                     new CoreCompetency(""));
 
-            String expectedValue = "\n" + "ID: " + String.valueOf(emptyJobTest.getId()) +"\n" +
+            String expectedValue = "\n" + "ID: " + emptyJobTest.getId() +"\n" +
                     "Name: Data not available" +"\n" +
                     "Employer: Data not available" + "\n" +
                     "Location: Data not available" + "\n" +
