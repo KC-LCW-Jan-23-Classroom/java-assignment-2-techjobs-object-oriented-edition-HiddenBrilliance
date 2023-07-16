@@ -86,7 +86,7 @@ public class Job {
     }
 
 
-    //    @Override
+
    @Override
     public String toString() {
         this.name = getName();
@@ -117,7 +117,7 @@ public class Job {
 
         }
 
-        return stringOutput.toString(); //Array.Split(","); should be one big string
+        return stringOutput.toString();
 
 
     }
