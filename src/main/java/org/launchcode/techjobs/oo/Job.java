@@ -112,8 +112,9 @@ public class Job {
             stringOutput.append(newLineEnd);
 
             if (jobFieldsValues[i] == "") {
-            System.out.println(jobFieldLabels[i] + "Data not available");
-}
+            System.out.println(jobFieldLabels[i].concat("Data not available"));
+            }
+
 
 
         }
