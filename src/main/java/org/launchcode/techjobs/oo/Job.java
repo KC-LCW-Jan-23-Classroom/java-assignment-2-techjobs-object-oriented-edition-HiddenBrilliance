@@ -107,7 +107,6 @@ public class Job {
             String newLineEnd = "\n";
 
            if (jobFieldsValues[i] == "") {
-               stringOutput.append(newLineBeginning);
                stringOutput.append(jobFieldLabels[i]);
                stringOutput.append("Data not available");
                stringOutput.append(newLineEnd);
