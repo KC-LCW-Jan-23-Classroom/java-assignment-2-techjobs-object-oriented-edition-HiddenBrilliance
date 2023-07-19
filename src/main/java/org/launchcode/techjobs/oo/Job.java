@@ -95,7 +95,7 @@ public class Job {
         this.positionType = getPositionType();
         this.coreCompetency = getCoreCompetency();
 
-        String[] jobFieldLabels = {"ID:  ", "Name: ", "Employer: ", "Location: ", "Position Type: ", "Core Competency: "};
+        String[] jobFieldLabels = {"ID: ", "Name: ", "Employer: ", "Location: ", "Position Type: ", "Core Competency: "};
         String[] jobFieldsValues = {String.valueOf(this.getId()), this.getName(), this.getEmployer().getValue(), this.getLocation().getValue(), this.getPositionType().getValue(), this.getCoreCompetency().getValue()};
 
         StringBuffer stringOutput = new StringBuffer();
@@ -107,7 +107,6 @@ public class Job {
             String newLineEnd = "\n";
 
            if (jobFieldsValues[i] == "") {
-               stringOutput.append(newLineBeginning);
                stringOutput.append(jobFieldLabels[i]);
                stringOutput.append("Data not available");
                stringOutput.append(newLineEnd);

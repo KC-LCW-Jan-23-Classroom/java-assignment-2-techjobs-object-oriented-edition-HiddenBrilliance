@@ -103,7 +103,7 @@ public class JobTest {
                     "Position Type: Data not available" +  "\n" +
                     "Core Competency: Data not available" +  "\n";
 
-            Assert.assertEquals(expectedValue, expectedValue.toString());
+            Assert.assertEquals(expectedValue, emptyJobTest.toString());
     }
 }
 
