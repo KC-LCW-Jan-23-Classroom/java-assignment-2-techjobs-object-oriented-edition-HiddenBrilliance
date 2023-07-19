@@ -20,7 +20,9 @@ public class Main {
 
         for (Job job : jobs){
             System.out.println(job);
+
       }
+
 
         //TODO figure out why Employer field for ID 3 is showing up for ID two when running on main
 

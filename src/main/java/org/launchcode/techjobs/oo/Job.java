@@ -106,14 +106,19 @@ public class Job {
             String newLineBeginning = "\n";
             String newLineEnd = "\n";
 
+           if (jobFieldsValues[i] == "") {
+               stringOutput.append(newLineBeginning);
+               stringOutput.append(jobFieldLabels[i]);
+               stringOutput.append("Data not available");
+               stringOutput.append(newLineEnd);
+           }
+
+           else {
             stringOutput.append(newLineBeginning);
             stringOutput.append(jobFieldLabels[i]);
             stringOutput.append(jobFieldsValues[i]);
-            stringOutput.append(newLineEnd);
+            stringOutput.append(newLineEnd);}
 
-            if (jobFieldsValues[i] == "") {
-            System.out.println(jobFieldLabels[i].concat("Data not available"));
-            }
 
 
 
