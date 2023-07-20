@@ -19,7 +19,7 @@ public class Main {
        jobs.add(job3);
 
         for (Job job : jobs){
-            System.out.println(job);
+            System.out.println(job.toString());
 
       }
 

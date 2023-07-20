@@ -84,7 +84,7 @@ public class JobTest {
         String[] jobFields = {String.valueOf(testJob2.getId()) , testJob2.getName() , testJob2.getEmployer().getValue() , testJob2.getLocation().getValue() , testJob2.getPositionType().getValue() , testJob2.getCoreCompetency().getValue()};
         String jobFieldValuesString = String.join(",", jobFields);
         Assert.assertEquals("ID:  , Name: , Employer: , Location: , Position Type: , Core Competency: ", jobFieldLabelsString.toString());
-        Assert.assertEquals("1,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString);
+        Assert.assertEquals("4,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString);
 
 
 

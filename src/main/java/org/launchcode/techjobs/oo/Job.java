@@ -100,30 +100,28 @@ public class Job {
 
         StringBuffer stringOutput = new StringBuffer();
 
-        String jobDisplayWithNewLines = ""; // says Job displayWithNewLines out of scope how to get it into scope
        for (int i = 0; i < jobFieldLabels.length; i++) {
 
-            String newLineBeginning = "\n";
-            String newLineEnd = "\n";
+           if (jobFieldsValues[i].equals("")) {
 
-           if (jobFieldsValues[i] == "") {
                stringOutput.append(jobFieldLabels[i]);
                stringOutput.append("Data not available");
-               stringOutput.append(newLineEnd);
+               stringOutput.append("\n");
            }
 
            else {
-            stringOutput.append(newLineBeginning);
-            stringOutput.append(jobFieldLabels[i]);
+//            stringOutput.append("\n");
+
+               stringOutput.append(jobFieldLabels[i]);
             stringOutput.append(jobFieldsValues[i]);
-            stringOutput.append(newLineEnd);}
+            stringOutput.append("\n");}
 
 
 
 
         }
 
-        return stringOutput.toString();
+        return "\n" + stringOutput;
 
 
     }
