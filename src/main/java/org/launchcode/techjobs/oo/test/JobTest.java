@@ -3,7 +3,6 @@ package org.launchcode.techjobs.oo.test;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.launchcode.techjobs.oo.*;
 import org.launchcode.techjobs.oo.Job;
 import org.launchcode.techjobs.oo.Employer;
 import org.launchcode.techjobs.oo.Location;
@@ -69,8 +68,8 @@ public class JobTest {
         char firstChar = stringTestJob1.charAt(0);
         char lastChar = stringTestJob1.charAt(stringTestJob1.length() - 1);
 
-        Assert.assertEquals("\n", Character.toString(firstChar));
-        Assert.assertEquals("\n", Character.toString(lastChar));
+        Assert.assertEquals('\n', firstChar);
+        Assert.assertEquals('\n', lastChar);
 
 
     }
@@ -85,7 +84,7 @@ public class JobTest {
         String[] jobFields = {String.valueOf(testJob2.getId()) , testJob2.getName() , testJob2.getEmployer().getValue() , testJob2.getLocation().getValue() , testJob2.getPositionType().getValue() , testJob2.getCoreCompetency().getValue()};
         String jobFieldValuesString = String.join(",", jobFields);
         Assert.assertEquals("ID:  , Name: , Employer: , Location: , Position Type: , Core Competency: ", jobFieldLabelsString.toString());
-        Assert.assertEquals("1,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString.toString());
+        Assert.assertEquals("1,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString);
 
 
 
