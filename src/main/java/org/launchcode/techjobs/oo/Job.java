@@ -110,7 +110,6 @@ public class Job {
            }
 
            else {
-//            stringOutput.append("\n");
 
                stringOutput.append(jobFieldLabels[i]);
             stringOutput.append(jobFieldsValues[i]);
@@ -132,7 +131,7 @@ public class Job {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, employer, location, positionType, coreCompetency);
+        return Objects.hash(getId());
     }
 
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the

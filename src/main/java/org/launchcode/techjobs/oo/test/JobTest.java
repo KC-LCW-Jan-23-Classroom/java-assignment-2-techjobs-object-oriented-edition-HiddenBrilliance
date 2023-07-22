@@ -77,14 +77,15 @@ public class JobTest {
     @Test
     public void testToStringContainsCorrectLabelsAndData() {
 
+        String expected = "\nID:  1\n" +
+                "Name: Eric\n"+
+                "Employer: BitWig\n" + "Location: France\n" + "Position Type: Tech Support\n" + "Core Competency: Hardware\n"
+                ;
 
         Job testJob2 = new Job("Eric", new Employer("BitWig"), new Location("France"), new PositionType("Tech Support"), new CoreCompetency("Hardware"));
-        String[] jobFieldLabels = {"ID:  ", " Name: ", " Employer: ", " Location: ", " Position Type: ", " Core Competency: "};
-        String jobFieldLabelsString = String.join(",", jobFieldLabels);
-        String[] jobFields = {String.valueOf(testJob2.getId()) , testJob2.getName() , testJob2.getEmployer().getValue() , testJob2.getLocation().getValue() , testJob2.getPositionType().getValue() , testJob2.getCoreCompetency().getValue()};
-        String jobFieldValuesString = String.join(",", jobFields);
-        Assert.assertEquals("ID:  , Name: , Employer: , Location: , Position Type: , Core Competency: ", jobFieldLabelsString.toString());
-        Assert.assertEquals("4,Eric,BitWig,France,Tech Support,Hardware", jobFieldValuesString);
+
+        Assert.assertEquals(expected, testJob2.toString());
+        Assert.assertEquals("4,Eric,BitWig,France,Tech Support,Hardware", testJob2.toString());
 
 
 
